@@ -15,8 +15,8 @@
 class ImgUtils
 {
 public:
-    void resize(cv::Mat &src, cv::Mat &dst, double width, double height);
-    void findEdges(cv::Mat &src, cv::Mat &cannyOutput, double firstThreshold, double secondThreshold);
+    static void findSquares(cv::Mat& image, std::vector<std::vector<cv::Point> >& squares);
+    
 };
 
 #endif /* imgutils_hpp */

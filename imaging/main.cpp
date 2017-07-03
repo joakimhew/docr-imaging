@@ -7,9 +7,20 @@
 //
 
 #include <iostream>
+#include <opencv2/highgui/highgui.hpp>
+#include "imgutils.hpp"
+
+
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    std::vector<std::vector<cv::Point> > squares;
+    cv::Mat image = cv::imread(argv[1]);
+    
+    ImgUtils imgUtils;
+    
+    imgUtils.findSquares(image, squares);
+    
+    cv::waitKey();
     return 0;
 }
